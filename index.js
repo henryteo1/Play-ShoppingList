@@ -18,6 +18,7 @@ addButtonEl.addEventListener("click", function () {
     let inputValue = myinputEl.value
 
     push(shoppinginDB, inputValue)
+    alert(inputValue + ' was added.')
 });
 
 function clearmyInputEl() {

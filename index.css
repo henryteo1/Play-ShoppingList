@@ -33,6 +33,13 @@ input {
     margin: 10px 0;
 }
 
+#info {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    margin: 10px;
+}
+
 button {
     color: #fdfdfd;
     background-color: #AC485A;
