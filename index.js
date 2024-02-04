@@ -31,9 +31,20 @@ function appenditemToShoppingListEl(item) {
     let newEL = document.createElement("li");
 
     newEL.addEventListener("click", function () {
-        let exactLocationofItemInDB = ref(database, `ShoppingList/${itemID}`)
 
-        remove(exactLocationofItemInDB)
+        var confirmDel = confirm('Confirm delete?')
+
+        if (confirmDel) {
+
+
+            let exactLocationofItemInDB = ref(database, `ShoppingList/${itemID}`)
+            alert(itemValue + " was deleted.")
+            remove(exactLocationofItemInDB)
+            
+        }
+        else {
+            alert('Nothing was deleted.')
+        }
     })
 
 
@@ -62,7 +73,7 @@ onValue(shoppinginDB, function (snapshot) {
     } else {
         shoppingListEl.innerHTML = "No items here..."
     }
-    
+
 });
 
 function clearShoppingListEl() {
